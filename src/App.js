@@ -7,6 +7,7 @@ import slash from './slash.png';
 import reward from './reward.png';
 import repeat from './repeat.png';
 import macbook from './macbook.jpg';
+import graphics from './graphics.png';
 
 const FirstBlock = styled.div`
   background-color: #f5f6f9;
@@ -23,22 +24,35 @@ const Header = styled.header`
 
 const Logo = styled.div`
   img {
-    width: 110px;
-    margin-right: 510px;
+    width: 130px;
+    margin-right: 670px;
   }
 `;
 
-const Button = styled.div`
+const Link = styled.a`
   display: inline-flex;
-  margin-top: 10px;
+  margin-top: 14px;
   font-size: 0.87rem;
   font-weight: 600;
-  margin-right: 18px;
+  margin-right: 22px;
   color: #5e6271;
-  :hover {
-    border-bottom: 2px solid currentColor;
-    margin-bottom: 10px;
-    cursor: pointer;
+  text-decoration: none;
+  position: relative;
+
+  ::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #5e6271;
+    height: 2px;
+    margin-top: 20px;
+    width: 0;
+    left: 50%;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+  :hover::after {
+    width: 100%;
+    left: 0;
   }
 `;
 
@@ -51,13 +65,11 @@ const Body = styled.div`
   font-size: 0.9rem;
 
   h1 {
-    margin-top: 34px;
-    margin-bottom: -15px;
-    margin-left: 10px;
-    width: 550px;
+    display: inline;
+    margin-left: -10px;
     font-weight: 510;
     letter-spacing: 1px;
-    font-size: 29px;
+    font-size: 46px;
   }
   h1 p {
     display: inline-flex;
@@ -72,7 +84,7 @@ const Body = styled.div`
   }
 
   h2 {
-    margin-top: 5px;
+    margin-top: -10px;
     font-size: 29x;
     color: #5e6271;
     font-weight: 600;
@@ -92,16 +104,16 @@ const Pill = styled.div`
   font-family: 'Avenir LT', 'Roboto', 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
   display: inline-block;
-  margin-top: 32px;
-  padding-left: 28px;
-  padding-right: 28px;
+  margin-top: 65px;
+  padding-left: 49px;
+  padding-right: 49px;
   padding-top: 8px;
   padding-bottom: 8px;
   border-radius: 10px;
   height: 35px;
   background-color: #fff;
   color: #7922ff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 925;
   line-height: 35px;
   width: 195px;
@@ -125,38 +137,127 @@ const FirstSectionFooter = styled.div`
 
 const Background = styled.svg`
   display: flex;
-  height: 20px;
+  height: 60px;
   margin-bottom: -10;
 `;
 
 const SecondBlock = styled.div`
+  margin-top: 110px;
+  display: flex;
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 `;
 
 const NavTools1 = styled.div`
   display: flex;
-  align-content: center;
-  block-size: 50;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: -125px;
+  margin-right: 60px;
+  p {
+    margin-top: 7px;
+    margin-left: -10px;
+  }
 `;
 
 const NavTools2 = styled.div`
   display: flex;
-  width: -10cm;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 75px;
+  margin-top: -4px;
+  p {
+    margin-top: 5px;
+  }
 `;
 
 const NavTools3 = styled.div`
   display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 80px;
+  margin-top: 5px;
+  p {
+    margin-top: 14px;
+  }
 `;
 
 const NavTools4 = styled.div`
   display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 6px;
+  p {
+    margin-top: 18px;
+  }
 `;
-const Options = styled.div`
-  display: inline-flex;
-  text-align: center;
-`;
+
 const Showcase = styled.div`
+  img {
+    width: 58vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+`;
+const Container = styled.div`
   display: flex;
+  margin-top: 100px;
+  background-color: #f5f6f9;
+  font-family: 'Avenir LT', 'Roboto', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+
+  p {
+    display: flex;
+    margin-top: 70px;
+    margin-left: 550px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+  }
+  img {
+    display: flex;
+    margin-top: 120px;
+    width: 20%;
+    margin-left: -300px;
+  }
+`;
+const Graphic1 = styled.div`
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 180px;
+`;
+
+const Graphic12 = styled.div`
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5e6271;
+  letter-spacing: 2;
+  margin-left: -475px;
+  margin-top: 210px;
+`;
+
+const Graphic2 = styled.div`
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+`;
+
+const Graphic22 = styled.div`
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5e6271;
+  letter-spacing: 2;
 `;
 
 export default function App() {
@@ -167,8 +268,8 @@ export default function App() {
           <Logo>
             <img src={logo} alt=" " />
           </Logo>
-          <Button Pricing>Pricing</Button>
-          <Button Support>Support</Button>
+          <Link href="#">Pricing</Link>
+          <Link href="#">Support</Link>
         </Header>
         <Body>
           <h1>
@@ -188,12 +289,13 @@ export default function App() {
           <br></br>
           <br></br>
           <br></br>
+          <br></br>
           <Background
             fill="#FFFFFF"
             class="big-half-circle-big-half-circle-1"
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
-            width="110%"
+            width="100%"
             height="100"
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
@@ -205,26 +307,34 @@ export default function App() {
       <SecondBlock>
         <NavTools1>
           <img src={list} alt=" " />
+          <p> List</p>
         </NavTools1>
         <NavTools2>
           <img src={slash} alt=" " />
+          <p> Slash</p>
         </NavTools2>
         <NavTools3>
           <img src={reward} alt=" " />
+          <p>Reward</p>
         </NavTools3>
         <NavTools4>
           <img src={repeat} alt=" " />
-        </NavTools4>
-        <Options>
-          <p>List</p>
-          <p>Slash</p>
-          <p>Reward</p>
           <p>Repeat</p>
-        </Options>
-        <Showcase>
-          <img src={macbook} alt=" " />
-        </Showcase>
+        </NavTools4>
       </SecondBlock>
+      <Showcase>
+        <img src={macbook} alt=" " />
+      </Showcase>
+      <Container>
+        <p> The powerful Science of Focus </p>
+        <img src={graphics} alt=" " />
+        <Graphic1>50%</Graphic1>
+        <Graphic12>more productive</Graphic12>
+        <Graphic2>50% </Graphic2>
+        <Graphic22>more free time</Graphic22>
+        <br></br>
+        <br></br>
+      </Container>
     </>
   );
 }
