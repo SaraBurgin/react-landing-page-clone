@@ -8,6 +8,7 @@ import reward from './reward.png';
 import repeat from './repeat.png';
 import macbook from './macbook.jpg';
 import graphics from './graphics.png';
+import block1 from './block1.jpg';
 
 const FirstBlock = styled.div`
   background-color: #f5f6f9;
@@ -56,7 +57,7 @@ const Link = styled.a`
   }
 `;
 
-const Body = styled.div`
+const Body = styled.body`
   font-family: sans-serif;
   margin-left: 130px;
   margin-right: 120px;
@@ -100,28 +101,33 @@ const Body = styled.div`
   }
 `;
 
-const Pill = styled.div`
+const Pill = styled.button`
   font-family: 'Avenir LT', 'Roboto', 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
   display: inline-block;
-  margin-top: 65px;
-  padding-left: 49px;
-  padding-right: 49px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  margin-top: 60px;
+  padding: 10 500 10 500;
   border-radius: 10px;
-  height: 35px;
+  height: 50px;
   background-color: #fff;
   color: #7922ff;
   font-size: 1.1rem;
-  font-weight: 925;
+  font-weight: 935;
   line-height: 35px;
-  width: 195px;
+  width: 300px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
   vertical-align: middle;
+
+  :hover {
+    background: white;
+    border-radius: 10px;
+    border-color: #7922ff;
+    border-width: 2px;
+  }
 `;
 
-const FirstSectionFooter = styled.div`
+const FirstSectionFooter = styled.footer`
   display: block;
   text-align: center;
   color: #8f96a8;
@@ -215,49 +221,93 @@ const Container = styled.div`
     sans-serif;
 
   p {
-    display: flex;
-    margin-top: 70px;
+    margin-top: 60px;
     margin-left: 550px;
     text-align: center;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 500;
   }
   img {
     display: flex;
-    margin-top: 120px;
+    margin-top: 130px;
     width: 20%;
-    margin-left: -300px;
+    margin-left: -330px;
   }
 `;
 const Graphic1 = styled.div`
-  display: inline-flex;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   margin-top: 180px;
+  margin-bottom: 5px;
+  margin-left: -440px;
 `;
 
 const Graphic12 = styled.div`
-  display: inline-flex;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   color: #5e6271;
   letter-spacing: 2;
-  margin-left: -475px;
+  margin-left: -40px;
   margin-top: 210px;
 `;
 
 const Graphic2 = styled.div`
-  display: inline-flex;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
+  margin-left: 330px;
+  margin-top: 210px;
 `;
 
 const Graphic22 = styled.div`
-  display: inline-flex;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   color: #5e6271;
   letter-spacing: 2;
+  margin-top: 240px;
+  margin-left: -40px;
+`;
+
+const Features = styled.div`
+  p {
+    text-align: center;
+    margin-top: 130px;
+    font-size: 24px;
+    font-weight: 475;
+    letter-spacing: 10;
+  }
+`;
+
+const Block1 = styled.div`
+display: flex; 
+flex-direction: column;
+
+  h1 {
+    margin-top: 75px;
+    margin-left: 790px;
+    font-size: 36px;
+    font-weight: 650;
+
+  }
+  p {
+    text-align: left;
+    margin-left: 790px;
+    margin-top: -20px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 365px;
+    color: #5e6271;
+    font-family: font-family: "Avenir LT", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 27px;
+  }
+  img {
+    margin-top: -215px;
+    margin-left: 250px;
+    width: 400px; 
+    max-width: 100%;
+    border-radius: 8px;
+    
+  }
 `;
 
 export default function App() {
@@ -332,9 +382,21 @@ export default function App() {
         <Graphic12>more productive</Graphic12>
         <Graphic2>50% </Graphic2>
         <Graphic22>more free time</Graphic22>
-        <br></br>
-        <br></br>
       </Container>
+
+      <Features>
+        <p>Features</p>
+        <Block1>
+          <h1>Hyper Focus</h1>
+          <br></br>
+          <p>
+            Your current task stays pinned on screen so you know where to focus,
+            <br></br>
+            at all times.
+          </p>
+          <img src={block1} alt=" "></img>
+        </Block1>
+      </Features>
     </>
   );
 }
